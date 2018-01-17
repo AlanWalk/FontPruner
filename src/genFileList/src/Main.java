@@ -50,7 +50,7 @@ public class Main {
 		if(f.isFile()){
 			String path =f.getPath();
 			String afterFix =path.substring(path.lastIndexOf("."),path.length());
-			if(afterFix.equals(".txt") ||afterFix.equals(".lua"))
+			if(afterFix.equals(".txt") || afterFix.equals(".lua") || afterFix.equals(".tab") || afterFix.equals(".json"))
 			{
 				result+=f.getPath()+"\r\n";
 				System.out.println(f.getPath());
