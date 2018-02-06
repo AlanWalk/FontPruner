@@ -1,1 +1,0 @@
-python FontPruner.py --inputPath=E:\SVN\Pirates\src\Content\GameData --inputPath=E:\SVN\Pirates\src\Content\Scripts --inputPath=E:\Git\FontPruner\resource --inputFont="E:\Git\FontPruner\resource\PingFang_Bold.ttf" --inputFont="E:\Git\FontPruner\resource\PingFang_Regular.ttf"
