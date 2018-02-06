@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
 public class ExtractionOperationUtil {
 
 	/***
-	 * ÊÇ·ñÊÇºº×Ö
+	 * æ˜¯å¦æ˜¯æ±‰å­—
 	 */
 	public static boolean isChineseCharacters(String str){
         boolean temp = false;
@@ -32,7 +32,7 @@ public class ExtractionOperationUtil {
 	}
 	
 	/**
-	 * É¸Ñ¡ÓĞĞ§×Ö·û
+	 * ç­›é€‰æœ‰æ•ˆå­—ç¬¦
 	 */
 	public static String ExtractVaildString(String str) {
 		return str.replaceAll( "\\s*|\t|\r|\n","");
@@ -95,21 +95,17 @@ public class ExtractionOperationUtil {
 	}
 	
 	public static ExtractResult ExtractUnrepeatedWordsFromString(String str) {
-		str =ExtractionOperationUtil.ExtractVaildString(str);
 		Map<Character, Integer> chineseCharMap = new LinkedHashMap<Character, Integer>();
 		Map<Character, Integer> unchineseCharMap = new LinkedHashMap<Character, Integer>();
 		char[] charArray=str.toCharArray();
 		for(char c :charArray)
 		{
-			if(c!= ' ')
-			{
 				if(ExtractionOperationUtil.isChineseCharacters(String.valueOf(c)))
 				{
 					checkCharInMapNum(chineseCharMap, c);
 				}else{
 					checkCharInMapNum(unchineseCharMap, c);
 				}
-			}
 		}
 		
 		ExtractResult result =  new ExtractResult();
@@ -128,7 +124,7 @@ public class ExtractionOperationUtil {
 		result.setUnChineseCharString(strBuf.toString());
 		//System.out.println(resultStr);
 //		for(int n :chineseCharMap.values()){
-//			System.out.println("×ÖÊı"+n);
+//			System.out.println("å­—æ•°"+n);
 //		}
 		return result;
 	}
